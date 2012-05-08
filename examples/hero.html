@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>IRCTC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/datepicker.css" rel="stylesheet"/>
+	</style>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">IRCTC</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class=""><a href="./hero.html">Trains</a></li>
+              <li class=""><a href="#about">Flights</a></li>
+              <li class=""><a href="#contact">Hotels</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h2>Indian Railway Catering and Tourism Corporation Limited</h2>
+        <p><a class="btn btn-primary btn-large">Contact Us&raquo;</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span8">
+         <form class="form-horizontal">
+        <fieldset>
+          <div class="control-group">
+            <label for="from" class="control-label">From</label>
+            <div class="controls">
+             <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Ahmedabad","Bengalooru","Chennai","Delhi","Faridabad","Guwahati","Hyderabad","Indore","Kolkata","Lucknow","Mumbai","Nagpur","Pune","Raichur","Trivandrum","Vishakhapatnam"]'>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="to" class="control-label">To</label>
+            <div class="controls">
+             <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Ahmedabad","Bengalooru","Chennai","Delhi","Faridabad","Guwahati","Hyderabad","Indore","Kolkata","Lucknow","Mumbai","Nagpur","Pune","Raichur","Trivandrum","Vishakhapatnam"]'>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="depart" class="control-label">Depart</label>
+            <div class="controls">
+            <input type="text" class="span2" value="02/16/2012" data-date-format="mm/dd/yyyy" id="depart" >
+              <select class="mini" id="select2">  
+                <option>Anytime</option>  
+                <option>12:00 am</option>  
+                <option>01:00 am</option>  
+                <option>02:00 am</option>  
+                <option>03:00 am</option>  
+                <option>04:00 am</option>  
+                <option>05:00 am</option>  
+                <option>06:00 am</option>  
+                <option>07:00 am</option>  
+                <option>08:00 am</option>  
+                <option>09:00 am</option>  
+                <option>10:00 am</option>  
+                <option>11:00 am</option>  
+                <option>12:00 pm</option>  
+                <option>01:00 pm</option>  
+                <option>02:00 pm</option>  
+                <option>03:00 pm</option>  
+                <option>04:00 pm</option>  
+                <option>05:00 pm</option>  
+                <option>06:00 pm</option>  
+                <option>07:00 pm</option>  
+                <option>08:00 pm</option>  
+                <option>09:00 pm</option>  
+                <option>10:00 pm</option>  
+                <option>11:00 pm</option>  
+              </select>  
+            </div>
+          </div>
+
+           <div class="control-group">
+            <label for="return" class="control-label">Return</label>
+            <div class="controls">
+            <input type="text" class="span2" value="02/23/2012" data-date-format="mm/dd/yyyy" id="return" >
+              <select class="mini" id="select3">  
+                <option>Anytime</option>  
+                <option>12:00 am</option>  
+                <option>01:00 am</option>  
+                <option>02:00 am</option>  
+                <option>03:00 am</option>  
+                <option>04:00 am</option>  
+                <option>05:00 am</option>  
+                <option>06:00 am</option>  
+                <option>07:00 am</option>  
+                <option>08:00 am</option>  
+                <option>09:00 am</option>  
+                <option>10:00 am</option>  
+                <option>11:00 am</option>  
+                <option>12:00 pm</option>  
+                <option>01:00 pm</option>  
+                <option>02:00 pm</option>  
+                <option>03:00 pm</option>  
+                <option>04:00 pm</option>  
+                <option>05:00 pm</option>  
+                <option>06:00 pm</option>  
+                <option>07:00 pm</option>  
+                <option>08:00 pm</option>  
+                <option>09:00 pm</option>  
+                <option>10:00 pm</option>  
+                <option>11:00 pm</option>  
+              </select>
+              </div>
+         </div> 
+          <div class="form-actions">
+            <a href="./starter-template.html" class="btn btn-primary">Save changes</a>
+          </div>
+        </fieldset>
+      </form>
+        </div>
+        <div class="span4">
+          <h2>Support</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/bootstrap-datepicker.js"></script>
+	<script>
+	    $(function () {
+	        $('#depart').datepicker({
+	            format: 'mm/dd/yyyy'
+	        });
+	        $('#return').datepicker({
+	            format: 'mm/dd/yyyy'
+	        });
+            $('#dp2').datepicker();
+	        $('#dp3').datepicker();
+
+
+	        var startDate = new Date(2012, 1, 20);
+	        var endDate = new Date(2012, 1, 25);
+	        $('#dp4').datepicker()
+				.on('changeDate', function (ev) {
+				    if (ev.date.valueOf() > endDate.valueOf()) {
+				        $('#alert').show().find('strong').text('The start date can not be greater then the end date');
+				    } else {
+				        $('#alert').hide();
+				        startDate = new Date(ev.date);
+				        $('#startDate').text($('#dp4').data('date'));
+				    }
+				    $('#dp4').datepicker('hide');
+				});
+	        $('#dp5').datepicker()
+				.on('changeDate', function (ev) {
+				    if (ev.date.valueOf() < startDate.valueOf()) {
+				        $('#alert').show().find('strong').text('The end date can not be less then the start date');
+				    } else {
+				        $('#alert').hide();
+				        endDate = new Date(ev.date);
+				        $('#endDate').text($('#dp5').data('date'));
+				    }
+				    $('#dp5').datepicker('hide');
+				});
+	    });
+	</script>
+  </body>
+</html>
