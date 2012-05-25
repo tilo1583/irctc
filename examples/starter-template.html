@@ -10,6 +10,7 @@
     <!-- Le styles -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <link href="../assets/css/datepicker.css" rel="stylesheet"/>
+    <link type="text/css" href="../assets/css/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
 	</style>
     <style type="text/css">
       body {
@@ -59,10 +60,19 @@
       <!-- Example row of columns -->
       <div class="row">
       <div class="span4">
-          <h2>Filters</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">Select &raquo;</a></p>
-        </div>
+            <div class="demo">
+                <p>
+	            <label for="amount">Start Time:</label>
+	            <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
+                </p>
+               <div id="slider"></div>
+                <p>
+	            <label for="amount1">End Time:</label>
+	            <input type="text" id="amount1" style="border:0; color:#f6931f; font-weight:bold;" />
+                </p>
+               <div id="slider1"></div>
+            </div>
+      </div>
       <div class="span8">
         <table class="table table-condensed table-striped">
             <thead>
@@ -247,43 +257,74 @@
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
     <script src="../assets/js/bootstrap-datepicker.js"></script>
-	<script>
-	    $(function () {
-	        $('#depart').datepicker({
-	            format: 'mm/dd/yyyy'
-	        });
-	        $('#return').datepicker({
-	            format: 'mm/dd/yyyy'
-	        });
-	        $('#dp2').datepicker();
-	        $('#dp3').datepicker();
+    <script type="text/javascript" src="../assets/js/jquery-1.7.2.min.js"></script>	<script type="text/javascript" src="../assets/js/jquery-ui-1.8.20.custom.min.js"></script>
+	<script type="text/javascript">
+	    // Slider
+	    $("#slider").slider({
+	        range: true,
+	        min: 0,
+	        max: 23,
+	        values: [0, 23],
+	        slide: function (event, ui) {
 
+	            var startTime = ui.values[0];
+	            var endTime = ui.values[1];
+	            if (startTime < 10) {
+	                startTime = "0" + startTime;
+	            }
+	            if (endTime < 10) {
+	                endTime = "0" + endTime;
+	            }
 
-	        var startDate = new Date(2012, 1, 20);
-	        var endDate = new Date(2012, 1, 25);
-	        $('#dp4').datepicker()
-				.on('changeDate', function (ev) {
-				    if (ev.date.valueOf() > endDate.valueOf()) {
-				        $('#alert').show().find('strong').text('The start date can not be greater then the end date');
-				    } else {
-				        $('#alert').hide();
-				        startDate = new Date(ev.date);
-				        $('#startDate').text($('#dp4').data('date'));
-				    }
-				    $('#dp4').datepicker('hide');
-				});
-	        $('#dp5').datepicker()
-				.on('changeDate', function (ev) {
-				    if (ev.date.valueOf() < startDate.valueOf()) {
-				        $('#alert').show().find('strong').text('The end date can not be less then the start date');
-				    } else {
-				        $('#alert').hide();
-				        endDate = new Date(ev.date);
-				        $('#endDate').text($('#dp5').data('date'));
-				    }
-				    $('#dp5').datepicker('hide');
-				});
+	            $("#amount").val(startTime + ":00 hrs" +
+			" - " + endTime+":00 hrs");
+                //$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+	        }
 	    });
+        var startTime = $("#slider").slider("values",0);
+        var endTime = $("#slider").slider("values", 1);
+        if (startTime < 10) {
+            startTime = "0" + startTime;
+        }
+        if (endTime < 10) {
+            endTime = "0" + endTime;
+        }
+
+        $("#amount").val(startTime + ":00 hrs" +
+			" - " + endTime + ":00 hrs");
+
+        $("#slider1").slider({
+            range: true,
+            min: 0,
+            max: 23,
+            values: [0, 23],
+            slide: function (event, ui) {
+
+                var startTime = ui.values[0];
+                var endTime = ui.values[1];
+                if (startTime < 10) {
+                    startTime = "0" + startTime;
+                }
+                if (endTime < 10) {
+                    endTime = "0" + endTime;
+                }
+
+                $("#amount1").val(startTime + ":00 hrs" +
+			" - " + endTime + ":00 hrs");
+                //$("#amount1").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        var startTime = $("#slider1").slider("values", 0);
+        var endTime = $("#slider1").slider("values", 1);
+        if (startTime < 10) {
+            startTime = "0" + startTime;
+        }
+        if (endTime < 10) {
+            endTime = "0" + endTime;
+        }
+
+        $("#amount1").val(startTime + ":00 hrs" +
+			" - " + endTime + ":00 hrs");
 	</script>
   </body>
 </html>
